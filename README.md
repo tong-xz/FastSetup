@@ -1,2 +1,2 @@
 # FastSetup
-Repo used for record any tool or platform configuration
+[🛠️] Fastly Configure new PC Dev Environment
