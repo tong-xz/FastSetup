@@ -1,10 +1,16 @@
-# Setup Neovim
+# Neovim
 
 [toc]
 
+## Use
 
 
-## MacOS
+
+
+
+## Config
+
+### MacOS
 
 Download nevim via bew. The original neovim downloaded from brew does not support icon display.
 
@@ -22,7 +28,7 @@ Open `iterm2`, `profiles -> open profiles -> edit profiles -> Text -> Use a diff
 
 
 
-### Package Manger
+#### Package Manger
 
 Use [**Lazy.nvim**](https://github.com/LazyVim/LazyVim/blob/main/README-CN.md) as the package manager.  Make directory to store nvim configuration information.
 
@@ -62,9 +68,9 @@ The file directory of `~/.config/nvim` should be like below.
 
 
 
-### PlugIns
+#### PlugIns
 
-#### [1. Nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
+##### [1. Nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
 
 > Side bar file explorer
 
@@ -144,7 +150,7 @@ Basic commands:
 
 
 
-#### 2. [ToggleTerm](https://github.com/akinsho/toggleterm.nvim)
+##### 2. [ToggleTerm](https://github.com/akinsho/toggleterm.nvim)
 
 > terminal inside neovim 
 
@@ -172,9 +178,32 @@ require("toggleterm").setup()
 
 
 
+##### 3. [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+
+> [LSP（Language Server Protocol](https://microsoft.github.io/language-server-protocol/)）The management usually involves two levels: the management of the language server (Language Server) and the integrated management of the client (usually a code editor or IDE).
+>
+> Provide more intelligent approach to conduct code completion.
 
 
-#### 3. [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
 
-> 
+install language server for python
 
+```bash
+npm i -g pyright
+```
+
+add to `init.lua` file
+
+```bash
+require'lspconfig'.pyright.setup{}
+```
+
+check what lsp installed by npm
+
+```bash
+npm list -g --depth 0
+```
+
+
+
+使用nvim打开文件之后，输入`:LspInfo` 查看lsp目前的信息
