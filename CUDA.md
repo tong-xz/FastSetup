@@ -21,6 +21,19 @@ export PATH="/usr/local/cuda/bin/nvcc:$PATH"
 Then, `source ./zshrc`
 
 
+How to switch between CUDA versions?
+
+change to another cuda version
+
+sudo ln -sfn /usr/local/cuda-11.8 /usr/local/cuda
+
+
+if error "too many soft link comes out", run
+
+sudo rm /usr/local/cuda
+
+
+
 
 ## [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html)
 
